@@ -5,6 +5,5 @@ import com.example.DemoPosaBackend.dto.TblProsaDemoParametros.TblProsaDemoParame
 import java.util.List;
 
 public interface TblProsaDemoParametrosService {
-
     public List <TblProsaDemoParametrosDto> getAll();
 }

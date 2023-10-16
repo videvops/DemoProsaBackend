@@ -14,15 +14,17 @@ import java.util.List;
 @RequestMapping("/errores")
 
 public class Errores {
-    // --> Variables
+
     private TblProsaDemoErroresService erroresService;
 
-    //--> Funciones
-    public Errores(TblProsaDemoErroresService erroresService){this.erroresService = erroresService;}
+    public Errores(TblProsaDemoErroresService erroresService){
+        this.erroresService = erroresService;
+    }
 
-    // --> Método GET
     @GetMapping
     public ResponseEntity<List<TblProsaDemoErroresDto>> getErrores(){
         return new ResponseEntity<List <TblProsaDemoErroresDto>>(erroresService.getAll(), HttpStatus.OK);
     }
+
+
 }

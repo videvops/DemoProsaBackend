@@ -12,7 +12,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/parametros")
-
 public class Parametros {
 
     private TblProsaDemoParametrosService parametrosService;
