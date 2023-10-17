@@ -48,9 +48,9 @@ public class TblProsaDemoVersiones {
 
     public void setCompilado(String compilado){this.compilado = compilado;}
 
-    public String setEstado(){return estado;}
+    public String getEstado(){return estado;}
 
-    public void getEstado(String estado){this.estado = estado;}
+    public void setEstado(String estado){this.estado = estado;}
 
     public String getFirmaRegistro() {
         return firmaRegistro;

@@ -1,11 +1,10 @@
 package com.example.DemoPosaBackend.entities;
 
 import jakarta.persistence.*;
-import java.sql.Date;
 
 @Entity
 @Table(name = "TBL_PROSADEMO_TIPO_PARAMETRO")
-public class TblProsaDemoTipoParametro {
+public class TblProsaDemoTiposParametros {
     @Id
     @Column(name = "ID_PARAMETRO", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
