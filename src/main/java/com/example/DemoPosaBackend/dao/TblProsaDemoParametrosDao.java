@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface TblProsaDemoParametrosDao extends JpaRepository <TblProsaDemoParametros, Integer> {
 
-    @Query("SELECT b FROM TblProsaDemoParametros b")
+    @Query(value = "SELECT b FROM TblProsaDemoParametros b")
     List<TblProsaDemoParametros> getAllParametros();
 }

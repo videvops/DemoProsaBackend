@@ -21,7 +21,7 @@ public class Parametros {
     }
 
     @GetMapping
-    public ResponseEntity<List<TblProsaDemoParametrosDto>> getParametros(){
-        return new ResponseEntity<List <TblProsaDemoParametrosDto>>(parametrosService.getAll(), HttpStatus.OK);
+    public ResponseEntity<List<TblProsaDemoParametrosDto>> getParametros() {
+        return new ResponseEntity<List<TblProsaDemoParametrosDto>>(parametrosService.getAll(), HttpStatus.OK);
     }
 }
