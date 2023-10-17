@@ -20,9 +20,9 @@ public class TblProsaDemoCatErrores {
     private String descripcion;
     @Column(name = "MENSAJE_ERROR", nullable = true , length = 512)
     private String mensajeError;
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name= "USUARIO", nullable = false)
-    private TblProsaDemoUsuarios usuario;
+//    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+//    @JoinColumn(name= "USUARIO", nullable = false)
+//    private TblProsaDemoUsuarios usuario;
     @Column(name = "SEVERIDAD",nullable = false)
     private Integer severidad;
     @Column(name = "GENERAR_EVENTO",nullable = false)
@@ -68,14 +68,6 @@ public class TblProsaDemoCatErrores {
 
     public void setCodigoError(TblProsaDemoErrores codigoError) {
         this.codigoError = codigoError;
-    }
-
-    public TblProsaDemoUsuarios getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(TblProsaDemoUsuarios usuario) {
-        this.usuario = usuario;
     }
 
     public Integer getSeveridad() {
