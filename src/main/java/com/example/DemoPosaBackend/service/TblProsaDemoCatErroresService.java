@@ -4,6 +4,6 @@ import com.example.DemoPosaBackend.dto.TblProsaDemoCatErrores.TblProsaDemoCatErr
 
 import java.util.List;
 
-public interface TblProsaDemoCatErroesService {
+public interface TblProsaDemoCatErroresService {
     public List <TblProsaDemoCatErroresDto> getAll();
 }
