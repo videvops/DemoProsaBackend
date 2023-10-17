@@ -9,6 +9,7 @@ public class TblProsaDemoVersionesDto {
     private String aplicativo;
     private String compilado;
     private String estado;
+    private String firmaRegistro;
 
     public TblProsaDemoVersionesDto(TblProsaDemoVersiones entity){
         this.id = Long.toString(entity.getId());
@@ -17,6 +18,7 @@ public class TblProsaDemoVersionesDto {
         this.aplicativo = entity.getAplicativo();
         this.compilado = entity.getCompilado();
         this.estado = entity.getEstado();
+        this.firmaRegistro = entity.getFirmaRegistro();
     }
 
 
@@ -42,5 +44,9 @@ public class TblProsaDemoVersionesDto {
     public void setEstado(String estado){this.estado = estado;}
 
     public String getEstado(){return estado;}
+
+    public String getFirmaRegistro() {return firmaRegistro;}
+
+    public void setFirmaRegistro(String firmaRegistro) {this.firmaRegistro = firmaRegistro;}
 
 }
