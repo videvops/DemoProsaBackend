@@ -1,11 +1,8 @@
 package com.example.DemoPosaBackend.service.Impl;
 
 import com.example.DemoPosaBackend.dao.TblProsaDemoTiposParametrosDao;
-import com.example.DemoPosaBackend.dao.TblProsaDemoVersionesDao;
 import com.example.DemoPosaBackend.dto.TblProsaDemoTiposParametros.TblProsaDemoTiposParametrosDto;
-import com.example.DemoPosaBackend.dto.TblProsaDemoVersiones.TblProsaDemoVersionesDto;
-import com.example.DemoPosaBackend.entities.TblProsaDemoTiposParametros;
-import com.example.DemoPosaBackend.entities.TblProsaDemoVersiones;
+import com.example.DemoPosaBackend.entities.TblProsaDemoTipoParametro;
 import com.example.DemoPosaBackend.service.TblProsaDemoTiposParametrosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +21,7 @@ public class TblProsaDemoTiposParametrosServiceImpl implements TblProsaDemoTipos
 
     @Override
     public List<TblProsaDemoTiposParametrosDto> getAll(){
-        List<TblProsaDemoTiposParametros> tiposList = daoTipos.getAllTipos();
+        List<TblProsaDemoTipoParametro> tiposList = daoTipos.getAllTipos();
         List<TblProsaDemoTiposParametrosDto> dtoResponse = new ArrayList<>();
 
         tiposList.forEach(tipo ->{

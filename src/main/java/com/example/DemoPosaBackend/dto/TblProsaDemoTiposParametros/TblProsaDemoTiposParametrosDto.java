@@ -1,6 +1,6 @@
 package com.example.DemoPosaBackend.dto.TblProsaDemoTiposParametros;
 
-import com.example.DemoPosaBackend.entities.TblProsaDemoTiposParametros;
+import com.example.DemoPosaBackend.entities.TblProsaDemoTipoParametro;
 
 public class TblProsaDemoTiposParametrosDto {
 
@@ -9,7 +9,7 @@ public class TblProsaDemoTiposParametrosDto {
     private String descripcion;
     private String rolAsociado;
 
-    public TblProsaDemoTiposParametrosDto(TblProsaDemoTiposParametros entity){
+    public TblProsaDemoTiposParametrosDto(TblProsaDemoTipoParametro entity){
         this.id = Long.toString(entity.getId());
         this.tipoParametro = entity.getTipoParametro();
         this.descripcion = entity.getDescripcion();

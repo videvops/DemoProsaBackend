@@ -14,7 +14,6 @@ public class TblProsaDemoErroresServiceImpl implements TblProsaDemoErroresServic
 
     private TblProsaDemoErroresDao erroresDao ;
 
-
     public TblProsaDemoErroresServiceImpl(TblProsaDemoErroresDao erroresDao) {
         this.erroresDao = erroresDao;
     }

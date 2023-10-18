@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "TBL_PROSADEMO_TIPO_PARAMETRO")
-public class TblProsaDemoTiposParametros {
+public class TblProsaDemoTipoParametro {
     @Id
     @Column(name = "ID_PARAMETRO", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
