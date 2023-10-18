@@ -3,6 +3,7 @@ package com.example.DemoPosaBackend.dto.TblProsaDemoParametros;
 import com.example.DemoPosaBackend.entities.TblProsaDemoParametros;
 
 public class TblProsaDemoParametrosDto {
+    private String id;
     private String usuario;
     private String fechaAlta;
     private String fechaCambio;
@@ -15,6 +16,7 @@ public class TblProsaDemoParametrosDto {
     private String firmaRegistro;
 
     public TblProsaDemoParametrosDto(TblProsaDemoParametros entity){
+        this.id = Long.toString(entity.getId());
         this.usuario = entity.getUsuario().getNombre();
         this.fechaAlta = entity.getFechaAlta().toString();
         this.fechaCambio = entity.getFechaCambio() != null ?  entity.getFechaCambio().toString() : null ;
@@ -26,6 +28,9 @@ public class TblProsaDemoParametrosDto {
         this.datoSensitivo = entity.getDatoSensitivo().toString();
         this.firmaRegistro = entity.getFirmaRegistro();
     }
+    public String getId(){return id;}
+
+    public void setId(String id) {this.id = id;}
 
     public String getUsuario() {
         return usuario;

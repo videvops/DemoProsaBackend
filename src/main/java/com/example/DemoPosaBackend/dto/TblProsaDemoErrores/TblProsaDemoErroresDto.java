@@ -4,6 +4,7 @@ import com.example.DemoPosaBackend.entities.TblProsaDemoErrores;
 
 public class TblProsaDemoErroresDto {
 
+    private String id;
     private String fecha;
     private String codigoError;
     private String usuario;
@@ -11,12 +12,16 @@ public class TblProsaDemoErroresDto {
 
 
     public TblProsaDemoErroresDto(TblProsaDemoErrores entity) {
+        this.id = Long.toString(entity.getId());
         this.fecha = entity.getFecha() != null ?  entity.getFecha().toString() :  null ;
         this.codigoError = entity.getCodigoError();
         this.usuario = entity.getUsuario().getNombre();
         this.firmaRegistro = entity.getFirmaRegistro();
     }
 
+    public String getId(){return id;}
+
+    public void setId(String id) {this.id = id;}
     public String getFecha() {
         return fecha;
     }

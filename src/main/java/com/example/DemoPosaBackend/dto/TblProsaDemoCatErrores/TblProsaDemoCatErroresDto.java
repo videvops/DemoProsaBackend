@@ -3,6 +3,7 @@ package com.example.DemoPosaBackend.dto.TblProsaDemoCatErrores;
 import com.example.DemoPosaBackend.entities.TblProsaDemoCatErrores;
 
 public class TblProsaDemoCatErroresDto {
+    private  String id;
     private String fecha;
     private String codigoError;
     private String descripcion;
@@ -12,6 +13,7 @@ public class TblProsaDemoCatErroresDto {
     private String firmaRegistro;
 
     public TblProsaDemoCatErroresDto(TblProsaDemoCatErrores entity ) {
+        this.id = Long.toString(entity.getId());
         this.fecha = entity.getFecha() != null ?  entity.getFecha().toString() :  null ;
         this.codigoError = entity.getCodigoError().getCodigoError();
         this.descripcion = entity.getDescripcion();
@@ -21,6 +23,9 @@ public class TblProsaDemoCatErroresDto {
         this.firmaRegistro = entity.getFirmaRegistro();
     }
 
+    public String getId(){return id;}
+
+    public void setId(String id) {this.id = id;}
     public String getFecha() {
         return fecha;
     }
