@@ -1,6 +1,7 @@
 package com.example.DemoPosaBackend.service.Impl;
 
 import com.example.DemoPosaBackend.dao.TblProsaDemoParametrosDao;
+import com.example.DemoPosaBackend.dto.TblProsaDemoCatTipoParametro.TblProsaDemoCatTipoParametroDto;
 import com.example.DemoPosaBackend.dto.TblProsaDemoParametros.TblProsaDemoParametrosDto;
 import com.example.DemoPosaBackend.entities.TblProsaDemoParametros;
 import com.example.DemoPosaBackend.service.TblProsaDemoParametrosService;
@@ -32,4 +33,10 @@ public class TblProsaDemoParametrosServiceImpl implements TblProsaDemoParametros
         });
         return dtoResponse;
     }
+
+    @Override
+    public TblProsaDemoParametrosDto createParametro() {
+        return null;
+    }
+
 }

@@ -14,35 +14,17 @@ public class TblProsaDemoCatErrores {
     private String fecha;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name= "CODIGO_ERROR", nullable = false)
-    private String codigoError;
+    private TblProsaDemoCatErrores codigoError;
     @Column(name = "DESCRIPCION", nullable = true , length = 120)
     private String descripcion;
     @Column(name = "MENSAJE_ERROR", nullable = true , length = 512)
     private String mensajeError;
-//    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-//    @JoinColumn(name= "USUARIO", nullable = false)
-//    private TblProsaDemoUsuarios usuario;
     @Column(name = "SEVERIDAD",nullable = false)
     private String severidad;
     @Column(name = "GENERAR_EVENTO",nullable = false)
     private String generarEvento;
     @Column(name = "FIRMA_REGISTRO", nullable = false, length = 512)
     private String firmaRegistro;
-
-    public TblProsaDemoCatErrores() {
-    }
-
-    public TblProsaDemoCatErrores(TblProsaDemoCatErroresDto dto) {
-        // Constructor que recibe un DTO y lo convierte a una entidad
-        this.id = dto.getId();
-        this.fecha = dto.getFecha();
-        this.codigoError = dto.getCodigoError();
-        this.descripcion = dto.getDescripcion();
-        this.mensajeError = dto.getMensajeError();
-        this.severidad = dto.getSeveridad();
-        this.generarEvento = dto.getGenerarEvento();
-        this.firmaRegistro = dto.getFirmaRegistro();
-    }
 
     public String getMensajeError() {
         return mensajeError;
@@ -76,11 +58,11 @@ public class TblProsaDemoCatErrores {
         this.fecha = fecha;
     }
 
-    public String getCodigoError() {
+    public TblProsaDemoCatErrores getCodigoError() {
         return codigoError;
     }
 
-    public void setCodigoError(String codigoError) {
+    public void setCodigoError(TblProsaDemoCatErrores codigoError) {
         this.codigoError = codigoError;
     }
 

@@ -32,11 +32,8 @@ public class TblProsaDemoCatErorresServiceImpl implements TblProsaDemoCatErrores
         return listCatErroresDto;
     }
 
-    // Crear un nuevo error
     @Override
     public TblProsaDemoCatErroresDto save(TblProsaDemoCatErroresDto dto) {
-        TblProsaDemoCatErrores catErrores = new TblProsaDemoCatErrores(dto);
-        catErroresDao.save(catErrores);
-        return new TblProsaDemoCatErroresDto(catErrores);
+        return null;
     }
 }
