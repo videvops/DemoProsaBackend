@@ -15,7 +15,7 @@ public class TblProsaDemoCatErroresDto {
     public TblProsaDemoCatErroresDto(TblProsaDemoCatErrores entity ) {
         this.id = Long.toString(entity.getId());
         this.fecha = entity.getFecha() != null ?  entity.getFecha().toString() :  null ;
-        this.codigoError = entity.getCodigoError().toString();
+        this.codigoError = entity.getCodigoError().getCodigoError();
         this.descripcion = entity.getDescripcion();
         this.mensajeError = entity.getMensajeError();
         this.severidad = entity.getSeveridad().toString();

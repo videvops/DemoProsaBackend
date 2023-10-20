@@ -14,7 +14,7 @@ public class TblProsaDemoCatErrores {
     private String fecha;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name= "CODIGO_ERROR", nullable = false)
-    private TblProsaDemoCatErrores codigoError;
+    private TblProsaDemoErrores codigoError;
     @Column(name = "DESCRIPCION", nullable = true , length = 120)
     private String descripcion;
     @Column(name = "MENSAJE_ERROR", nullable = true , length = 512)
@@ -58,11 +58,11 @@ public class TblProsaDemoCatErrores {
         this.fecha = fecha;
     }
 
-    public TblProsaDemoCatErrores getCodigoError() {
+    public TblProsaDemoErrores getCodigoError() {
         return codigoError;
     }
 
-    public void setCodigoError(TblProsaDemoCatErrores codigoError) {
+    public void setCodigoError(TblProsaDemoErrores codigoError) {
         this.codigoError = codigoError;
     }
 

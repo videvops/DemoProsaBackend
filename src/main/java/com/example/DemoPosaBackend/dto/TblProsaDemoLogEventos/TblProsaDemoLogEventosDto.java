@@ -24,7 +24,7 @@ public class TblProsaDemoLogEventosDto {
         this.ipSesion = entity.getIpSesion();
         this.evento = entity.getEvento();
         this.parametros = entity.getParametros();
-        this.firmaRegistro = entity.getEvento();
+        this.firmaRegistro = entity.getFirmaRegistro();
     }
     public String getId(){return id;}
 
