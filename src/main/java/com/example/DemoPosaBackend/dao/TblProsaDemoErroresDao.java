@@ -12,4 +12,7 @@ public interface TblProsaDemoErroresDao extends JpaRepository<TblProsaDemoErrore
 
     @Query(value = "SELECT b FROM TblProsaDemoErrores b")
     List<TblProsaDemoErrores> getAllErrores();
+
+    @Query(value = "SELECT b FROM TblProsaDemoErrores b where b.id = :id")
+    TblProsaDemoErrores getById(Integer id);
 }

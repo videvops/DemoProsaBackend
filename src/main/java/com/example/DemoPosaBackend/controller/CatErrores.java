@@ -1,5 +1,6 @@
 package com.example.DemoPosaBackend.controller;
 
+import com.example.DemoPosaBackend.dto.TblProsaDemoCatErrores.CatErroresRequestDto;
 import com.example.DemoPosaBackend.dto.TblProsaDemoCatErrores.TblProsaDemoCatErroresDto;
 import com.example.DemoPosaBackend.dto.TblProsaDemoErrores.TblProsaDemoErroresDto;
 import com.example.DemoPosaBackend.dto.TblProsaDemoParametros.TblProsaDemoParametrosDto;
@@ -10,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.List;
 // Este archivo es el controlador de errores
 @RestController
@@ -30,9 +32,8 @@ public class CatErrores {
         return new ResponseEntity<List <TblProsaDemoCatErroresDto>>(erroresCatService.getAll(), HttpStatus.OK);
     }
 
-    // Crear un nuevo error
     @PostMapping
-    public ResponseEntity<?> save(@RequestBody TblProsaDemoCatErroresDto dto){
+    public ResponseEntity<TblProsaDemoCatErroresDto> save(@RequestBody CatErroresRequestDto dto) throws ParseException {
         return new ResponseEntity<>(erroresCatService.save(dto), HttpStatus.CREATED);
     }
 }

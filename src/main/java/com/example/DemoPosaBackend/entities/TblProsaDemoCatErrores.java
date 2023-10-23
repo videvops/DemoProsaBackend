@@ -3,15 +3,17 @@ package com.example.DemoPosaBackend.entities;
 import com.example.DemoPosaBackend.dto.TblProsaDemoCatErrores.TblProsaDemoCatErroresDto;
 import jakarta.persistence.*;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "TBL_PROSADEMO_CAT_ERRORES")
 public class TblProsaDemoCatErrores {
     @Id
     @Column(name = "NUMERO", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Integer id;
     @Column(name = "FECHA",nullable = false)
-    private String fecha;
+    private Date fecha;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name= "CODIGO_ERROR", nullable = false)
     private TblProsaDemoErrores codigoError;
@@ -20,9 +22,9 @@ public class TblProsaDemoCatErrores {
     @Column(name = "MENSAJE_ERROR", nullable = true , length = 512)
     private String mensajeError;
     @Column(name = "SEVERIDAD",nullable = false)
-    private String severidad;
+    private Integer severidad;
     @Column(name = "GENERAR_EVENTO",nullable = false)
-    private String generarEvento;
+    private Integer generarEvento;
     @Column(name = "FIRMA_REGISTRO", nullable = false, length = 512)
     private String firmaRegistro;
 
@@ -42,19 +44,19 @@ public class TblProsaDemoCatErrores {
         this.descripcion = descripcion;
     }
 
-    public long getId() {
-        return Long.parseLong(id);
+    public Integer getId() {
+        return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
@@ -66,19 +68,19 @@ public class TblProsaDemoCatErrores {
         this.codigoError = codigoError;
     }
 
-    public String getSeveridad() {
+    public Integer getSeveridad() {
         return severidad;
     }
 
-    public void setSeveridad(String severidad) {
+    public void setSeveridad(Integer severidad) {
         this.severidad = severidad;
     }
 
-    public String getGenerarEvento() {
+    public Integer getGenerarEvento() {
         return generarEvento;
     }
 
-    public void setGenerarEvento(String generarEvento) {
+    public void setGenerarEvento(Integer generarEvento) {
         this.generarEvento = generarEvento;
     }
 

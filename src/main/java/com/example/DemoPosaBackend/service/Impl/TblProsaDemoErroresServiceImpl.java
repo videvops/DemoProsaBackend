@@ -28,4 +28,8 @@ public class TblProsaDemoErroresServiceImpl implements TblProsaDemoErroresServic
         });
         return listErroresDto;
     }
+    @Override
+    public TblProsaDemoErrores getByID(Integer id){
+        return erroresDao.getById(id);
+    }
 }
