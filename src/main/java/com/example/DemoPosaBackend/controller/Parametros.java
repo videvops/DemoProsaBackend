@@ -25,7 +25,8 @@ public class Parametros {
         return new ResponseEntity<List<TblProsaDemoParametrosDto>>(parametrosService.getAll(), HttpStatus.OK);
     }
 
-    @PostMapping ResponseEntity <TblProsaDemoParametrosDto> createParametro(){
+    @PostMapping
+    public ResponseEntity <TblProsaDemoParametrosDto> createParametro(){
         return new ResponseEntity<>(parametrosService.createParametro(), HttpStatus.OK);
     }
 

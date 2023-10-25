@@ -1,6 +1,8 @@
+// Este archivo sirve para implementar los metodos de la interfaz TblProsaDemoUsuariosService
 package com.example.DemoPosaBackend.service.Impl;
 
 import com.example.DemoPosaBackend.dao.TblProsaDemoUsuariosDao;
+import com.example.DemoPosaBackend.dto.TblProsaDemoUsuarios.RequestDto;
 import com.example.DemoPosaBackend.dto.TblProsaDemoUsuarios.TblProsaDemoUsuariosDto;
 import com.example.DemoPosaBackend.entities.TblProsaDemoUsuarios;
 import com.example.DemoPosaBackend.service.TblProsaDemoUsuariosService;
@@ -30,5 +32,10 @@ public class TblProsaDemoUsuariosServiceImpl implements TblProsaDemoUsuariosServ
             dtoResponse.add(dto);
         });
         return dtoResponse;
+    }
+
+    @Override
+    public TblProsaDemoUsuariosDto createUsuario(RequestDto dto) {
+        return null;
     }
 }
